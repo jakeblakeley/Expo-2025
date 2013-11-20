@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px"
+	 height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g id="Layer_1">
+</g>
+<g id="Blue">
+	<path id="Blue_1_" fill="#3B5998" d="M61.31,64.946c2.008,0,3.637-1.628,3.637-3.637V2.69c0-2.009-1.629-3.637-3.637-3.637H2.69
+		c-2.009,0-3.637,1.628-3.637,3.637v58.62c0,2.009,1.628,3.637,3.637,3.637H61.31z"/>
+	<path id="f" fill="#FFFFFF" d="M44.519,64.946V39.429h8.565l1.282-9.944h-9.848v-6.349c0-2.879,0.8-4.841,4.928-4.841l5.267-0.002
+		V9.397c-0.911-0.121-4.037-0.392-7.674-0.392c-7.593,0-12.79,4.634-12.79,13.146v7.333h-8.587v9.944h8.587v25.518H44.519z"/>
+</g>
+</svg>

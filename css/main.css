@@ -1,0 +1,297 @@
+@import url("//hello.myfonts.net/count/27de53");
+::-moz-selection {
+  background: #00b2e6;
+  text-shadow: none; }
+
+::selection {
+  background: #00b2e6;
+  text-shadow: none; }
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  color: #333333; }
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll; }
+
+.wrapper {
+  overflow-y: hidden;
+  overflow-x: scroll; }
+
+a {
+  color: #00b2e6;
+  text-decoration: none;
+  border-bottom: #00b2e6 1px dotted; }
+
+@font-face {
+  font-family: 'MuseoSlab-300';
+  src: url("../webfonts/museo.eot");
+  src: url("../webfonts/museo.eot?#iefix") format("embedded-opentype"), url("../webfonts/museo.woff") format("woff"), url("../webfonts/museo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+p {
+  line-height: 1.5; }
+
+h1, h2, h3 {
+  font-weight: 300;
+  margin: 0px 2%; }
+
+h1 {
+  font-family: 'MuseoSlab-300', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  font-size: 48px;
+  line-height: 64px; }
+
+h2 {
+  font-family: 'MuseoSlab-300', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  font-size: 32px;
+  line-height: 48px; }
+
+h3 {
+  font-size: 24px; }
+
+hr {
+  border: none;
+  margin: 16px auto;
+  border-top: #00b2e6 1px solid; }
+  hr.short {
+    width: 33%;
+    border-top: #00b2e6 1px dotted; }
+
+.highlight {
+  color: #00b2e6; }
+
+.center {
+  text-align: center; }
+
+button {
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  border: 2px solid #00b2e6;
+  color: #00b2e6;
+  background: transparent;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  padding: 8px 16px;
+  margin: 8px 4%; }
+  button.large {
+    width: 92%; }
+    button.large:hover:after, button.large:active:after {
+      height: 1000%;
+      height: 92vw;
+      opacity: 1; }
+  button.small {
+    width: 33%; }
+    button.small:hover:after, button.small:active:after {
+      height: 300%;
+      height: 33vw;
+      opacity: 1; }
+  button:hover, button:active {
+    color: white; }
+  button:after {
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: #00b2e6;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s; }
+
+label {
+  width: 100%;
+  color: white;
+  line-height: 24px; }
+
+input {
+  width: 96%;
+  height: 24px;
+  line-height: 24px;
+  padding: 4px 2%;
+  margin-bottom: 8px;
+  border: none;
+  outline: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: #eeeeee; }
+  input:focus {
+    -webkit-box-shadow: 0px 0px 0px 2px #00b2e6 inset;
+    box-shadow: 0px 0px 0px 2px #00b2e6 inset; }
+
+.inputerror {
+  -webkit-box-shadow: 0px 0px 0px 2px #ffa73e inset;
+  box-shadow: 0px 0px 0px 2px #ffa73e inset; }
+
+.timeicon, .placeicon, .moneyicon {
+  width: 24px;
+  height: 24px;
+  margin: 4px 16px 4px 4%;
+  float: left; }
+
+.timeicon {
+  background: url("../img/time24.png") no-repeat center;
+  background: url("../img/time.png") no-repeat center/24px 24px;
+  background: url("../img/time.svg") no-repeat center;
+  -webkit-background-size: 24px 24px;
+  -moz-background-size: 24px 24px;
+  background-size: 24px 24px; }
+
+.placeicon {
+  background: url("../img/place24.png") no-repeat center;
+  background: url("../img/place.png") no-repeat center/24px 24px;
+  background: url("../img/place.svg") no-repeat center;
+  -webkit-background-size: 24px 24px;
+  -moz-background-size: 24px 24px;
+  background-size: 24px 24px; }
+
+.moneyicon {
+  background: url("../img/money24.png") no-repeat center;
+  background: url("../img/money.png") no-repeat center/24px 24px;
+  background: url("../img/money.svg") no-repeat center;
+  -webkit-background-size: 24px 24px;
+  -moz-background-size: 24px 24px;
+  background-size: 24px 24px; }
+
+nav {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 64px;
+  height: 100%;
+  background: red; }
+
+section.landing {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 200%;
+  height: 100%;
+  background: url("../img/gradient.jpg") repeat-x;
+  -webkit-background-size: 1px 100%;
+  -moz-background-size: 1px 100%;
+  background-size: 1px 100%;
+  background: linear-gradient(to bottom, #00b2e6 0%, #7bbcc3 100%); }
+  section.landing .landingContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px; }
+  section.landing .buildings {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 50%;
+    z-index: 1; }
+    section.landing .buildings .buildingwrapper {
+      position: absolute;
+      height: 100%; }
+      section.landing .buildings .buildingwrapper img {
+        position: relative;
+        height: 100%; }
+      section.landing .buildings .buildingwrapper:nth-of-type(1) {
+        left: 0px; }
+      section.landing .buildings .buildingwrapper:nth-of-type(2) {
+        right: -10%; }
+      section.landing .buildings .buildingwrapper:nth-of-type(3) {
+        left: 16px; }
+      section.landing .buildings .buildingwrapper:nth-of-type(4) {
+        right: 15%; }
+      section.landing .buildings .buildingwrapper:nth-of-type(5) {
+        right: 15%; }
+      section.landing .buildings .buildingwrapper:nth-of-type(6) {
+        left: 15%; }
+      section.landing .buildings .buildingwrapper:nth-of-type(7) {
+        right: 35%; }
+      section.landing .buildings .buildingwrapper:nth-of-type(8) {
+        left: 15%; }
+    section.landing .buildings img.stuck {
+      position: fixed;
+      right: auto; }
+  section.landing .firstIntro {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%; }
+    section.landing .firstIntro .titleContainer {
+      margin: auto;
+      position: absolute;
+      top: 10%;
+      left: -64px;
+      bottom: 0;
+      right: 0;
+      width: 40%;
+      z-index: 3; }
+      section.landing .firstIntro .titleContainer h1 {
+        color: white;
+        line-height: 1;
+        text-align: center; }
+  section.landing .secondIntro {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%; }
+
+section.events {
+  position: absolute;
+  top: 0px;
+  left: 200%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 5; }
+
+section.map {
+  position: absolute;
+  top: 0px;
+  left: 300%;
+  width: 100%;
+  height: 100%;
+  background: yellow; }
+
+section.tickets {
+  position: absolute;
+  top: 0px;
+  left: 400%;
+  width: 100%;
+  height: 100%;
+  background: green; }
+
+.slabtexted .slabtext {
+  display: -moz-inline-box;
+  display: inline-block;
+  white-space: nowrap; }
+
+.slabtextinactive .slabtext {
+  display: inline;
+  white-space: normal;
+  font-size: 1em !important;
+  letter-spacing: inherit !important;
+  word-spacing: inherit !important;
+  *letter-spacing: 0 !important;
+  *word-spacing: 0 !important; }
+
+.slabtextdone .slabtext {
+  display: block; }
