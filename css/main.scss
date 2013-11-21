@@ -5,6 +5,8 @@ $mediumgrey: #CCCCCC;
 $darkgrey: #333333;
 $maincolor: #00B2E6;
 $errorcolor: #FFA73E;
+$secondarycolor: #34495E;
+$secondarycolordark: #2C3E50;
 
 ::-moz-selection {
     background: $maincolor;
@@ -180,8 +182,11 @@ input{
  // Icons
 //===========================//
 //48px nav icons
-.homeicon, .eventicon, .mapicon, .ticketsicon, .plusicon{
-
+.homeicon, .eventicon, .mapicon, .ticketsicon{
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    background: red;
 }
 .homeicon{
 
@@ -195,10 +200,17 @@ input{
 .ticketsicon{
 
 }
+
+//32px
+.plusicon{
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+}
+
 .plusicon{
 
 }
-
 //24px
 .timeicon, .placeicon, .moneyicon{
     width: 24px;
@@ -239,7 +251,27 @@ nav{
     top: 0px;
     width: 64px;
     height: 100%;
-    background: red;
+    background: $secondarycolor;
+    z-index: 99;
+    &.slideout{
+        position: fixed;
+    }
+    .icon{
+        
+    }
+    p{
+        text-align: center;
+        line-height: 1;
+        margin: 4px 0px 16px 0px;
+        color: $white;
+    }
+}
+.showNav{
+    position: fixed;
+    left: 8px;
+    top: 16px;
+    background: $secondarycolordark;
+    z-index: 98;
 }
   //==========================//
  // Landing
@@ -276,30 +308,56 @@ section.landing{
             img{
                 position: relative;
                 height: 100%;
-            }
-            &:nth-of-type(1){//burj
                 left: 0px;
             }
+            &:nth-of-type(1){//burj
+                left: 5%;
+            }
             &:nth-of-type(2){//cn tower
-                right: -10%;
+                right: -25%;
             }
             &:nth-of-type(3){//financial
-                left: 16px;
+                right: -20%;
             }
             &:nth-of-type(4){//eiffel
-                right: 15%;
+                right: -25%;
             }
             &:nth-of-type(5){//tajmahal
-                right: 15%;
+                right: 30%;
             }
             &:nth-of-type(6){//seattle
-                left: 15%;
+                right: -25%;
             }
             &:nth-of-type(7){//colloseum
-                right: 35%;
+                right: -10%;
             }
             &:nth-of-type(8){//opera
                 left: 15%;
+            }
+            //positioning when stellar.js turned off
+            &.mobile:nth-of-type(1){//burj
+                left: 16px;
+            }
+            &.mobile:nth-of-type(2){//cn tower
+                right: 0px;
+            }
+            &.mobile:nth-of-type(3){//financial
+                left: 32px;
+            }
+            &.mobile:nth-of-type(4){//eiffel
+                right: 0px;
+            }
+            &.mobile:nth-of-type(5){//tajmahal
+                right: 25%;
+            }
+            &.mobile:nth-of-type(6){//seattle
+                left: 20%;
+            }
+            &.mobile:nth-of-type(7){//colloseum
+                right: 25%;
+            }
+            &.mobile:nth-of-type(8){//opera
+                left: 25%;
             }
         }
         img.stuck{
@@ -316,8 +374,8 @@ section.landing{
         .titleContainer{
             margin: auto;
             position: absolute;
-            top: 10%; left: -64px; bottom: 0; right: 0;
-            width: 40%;
+            top: 10%; left: 64px; bottom: 0; right: 0;
+            width: 33%;
             z-index: 3;
             h1{
                 color: $white;
@@ -328,9 +386,18 @@ section.landing{
     }
     .secondIntro{
         position: absolute;
-        left: 50%;
-        width: 50%;
+        top: 0;
+        right: 5%;
+        width: 25%;
         height: 100%;
+        display: table;
+        p{
+            color: $white;
+            font-size: 24px;
+            line-height: 1.5;
+            display: table-cell; 
+            vertical-align: middle; 
+        }
     }
 }
 

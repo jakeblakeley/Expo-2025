@@ -142,6 +142,17 @@ input {
   -webkit-box-shadow: 0px 0px 0px 2px #ffa73e inset;
   box-shadow: 0px 0px 0px 2px #ffa73e inset; }
 
+.homeicon, .eventicon, .mapicon, .ticketsicon {
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  background: red; }
+
+.plusicon {
+  width: 32px;
+  height: 32px;
+  padding: 8px; }
+
 .timeicon, .placeicon, .moneyicon {
   width: 24px;
   height: 24px;
@@ -178,7 +189,22 @@ nav {
   top: 0px;
   width: 64px;
   height: 100%;
-  background: red; }
+  background: #34495e;
+  z-index: 99; }
+  nav.slideout {
+    position: fixed; }
+  nav p {
+    text-align: center;
+    line-height: 1;
+    margin: 4px 0px 16px 0px;
+    color: white; }
+
+.showNav {
+  position: fixed;
+  left: 8px;
+  top: 16px;
+  background: #2c3e50;
+  z-index: 98; }
 
 section.landing {
   position: absolute;
@@ -209,23 +235,40 @@ section.landing {
       height: 100%; }
       section.landing .buildings .buildingwrapper img {
         position: relative;
-        height: 100%; }
-      section.landing .buildings .buildingwrapper:nth-of-type(1) {
+        height: 100%;
         left: 0px; }
+      section.landing .buildings .buildingwrapper:nth-of-type(1) {
+        left: 5%; }
       section.landing .buildings .buildingwrapper:nth-of-type(2) {
-        right: -10%; }
+        right: -25%; }
       section.landing .buildings .buildingwrapper:nth-of-type(3) {
-        left: 16px; }
+        right: -20%; }
       section.landing .buildings .buildingwrapper:nth-of-type(4) {
-        right: 15%; }
+        right: -25%; }
       section.landing .buildings .buildingwrapper:nth-of-type(5) {
-        right: 15%; }
+        right: 30%; }
       section.landing .buildings .buildingwrapper:nth-of-type(6) {
-        left: 15%; }
+        right: -25%; }
       section.landing .buildings .buildingwrapper:nth-of-type(7) {
-        right: 35%; }
+        right: -10%; }
       section.landing .buildings .buildingwrapper:nth-of-type(8) {
         left: 15%; }
+      section.landing .buildings .buildingwrapper.mobile:nth-of-type(1) {
+        left: 16px; }
+      section.landing .buildings .buildingwrapper.mobile:nth-of-type(2) {
+        right: 0px; }
+      section.landing .buildings .buildingwrapper.mobile:nth-of-type(3) {
+        left: 32px; }
+      section.landing .buildings .buildingwrapper.mobile:nth-of-type(4) {
+        right: 0px; }
+      section.landing .buildings .buildingwrapper.mobile:nth-of-type(5) {
+        right: 25%; }
+      section.landing .buildings .buildingwrapper.mobile:nth-of-type(6) {
+        left: 20%; }
+      section.landing .buildings .buildingwrapper.mobile:nth-of-type(7) {
+        right: 25%; }
+      section.landing .buildings .buildingwrapper.mobile:nth-of-type(8) {
+        left: 25%; }
     section.landing .buildings img.stuck {
       position: fixed;
       right: auto; }
@@ -239,10 +282,10 @@ section.landing {
       margin: auto;
       position: absolute;
       top: 10%;
-      left: -64px;
+      left: 64px;
       bottom: 0;
       right: 0;
-      width: 40%;
+      width: 33%;
       z-index: 3; }
       section.landing .firstIntro .titleContainer h1 {
         color: white;
@@ -250,9 +293,17 @@ section.landing {
         text-align: center; }
   section.landing .secondIntro {
     position: absolute;
-    left: 50%;
-    width: 50%;
-    height: 100%; }
+    top: 0;
+    right: 5%;
+    width: 25%;
+    height: 100%;
+    display: table; }
+    section.landing .secondIntro p {
+      color: white;
+      font-size: 24px;
+      line-height: 1.5;
+      display: table-cell;
+      vertical-align: middle; }
 
 section.events {
   position: absolute;

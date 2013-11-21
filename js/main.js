@@ -4,6 +4,46 @@
 //assign pixel size so stellar.js works
 resizeBuildings();
 
+//stellar.js parallax effect
+$.stellar.positionProperty.limited = {
+	setLeft: function($element, newLeft, originalLeft) {
+	  	//stops the element from going off the page
+	    if (!$element.hasClass("stuck")) {
+			$element.css('left', newLeft);
+		} else {
+			$element.css('left', "0");
+		}
+	}
+}
+
+//initialize stellar and building waypoints if not on mobile
+function initStellar(){
+  	if (Modernizr.touch && Modernizr.geolocation) {
+      	$(".buildingwrapper").addClass("mobile")
+    } else {
+      	$.stellar({
+			horizontalScrolling: true,
+			verticalScrolling: false,
+			responsive: true,
+			positionProperty: 'limited',
+			horizontalOffset: 0,
+			parallaxBackgrounds: false,
+			hideDistantElements: false
+		});
+		//waypoint to align the buildings at edge of the page
+		$('.buildingwrapper').waypoint(function(direction) {
+			if (direction === "right") {
+				$(this).children("img").addClass("stuck");
+			} else if (direction === "left") {
+				$(this).children("img").removeClass("stuck");
+			}
+		}, { horizontal:true });
+    }
+}
+$(window).load(function() {
+	initStellar();
+});
+
 $(document).ready(function(){
 	// for scrollbar to work horizontally instead
 	$(function(){
@@ -17,52 +57,19 @@ $(document).ready(function(){
 	$(window).load(function() {
 		$(".titleContainer h1").slabText();
 	});
-
-	
 });
 
 //assign pixel size so stellar.js works
 $(window).resize(function() {
   	resizeBuildings();
-  	refreshStellar();
 });
 
   //==========================//
- // Landing
+ // Navigation
 //===========================//
-//stellar.js parallax effect
-$.stellar.positionProperty.limited = {
-	setLeft: function($element, newLeft, originalLeft) {
-	  	//stops the element from going off the page
-	    if (!$element.hasClass("stuck")) {
-			$element.css('left', newLeft);
-		}
-	}
-}
-$(window).load(function() {
-	//stellar.js setup
-	$.stellar({
-		horizontalScrolling: true,
-		verticalScrolling: false,
-		responsive: true,
-		positionProperty: 'limited',
-		horizontalOffset: 0,
-		parallaxBackgrounds: false,
-		hideDistantElements: false
-	});
-
-	//waypoint to align the buildings at edge of the page
-	$('.buildingwrapper').waypoint(function(direction) {
-		if (direction === "right") {
-			$(this).children("img").addClass("stuck");
-			$(this).children("img").css("left","0px");
-		} else if (direction === "left") {
-			$(this).children("img").removeClass("stuck");
-		}
-	}, { horizontal:true });
+$(".showNav").click(function(){
+	$("nav").addClass("slideout");
 });
-
-//sliding speed of buildings
 
   //==========================//
  // Misc functions
@@ -75,7 +82,7 @@ function resizeBuildings(){
 	wrapper.children("img").css( "width", width );
 }
 
-function refreshStellar(){
+/*function refreshStellar(){
 	// Find out all my elements that are being manipulated with stellar
     var particles = $(".buildingwrapper img");
 
@@ -91,4 +98,4 @@ function refreshStellar(){
             $(window).data('plugin_stellar').init();
         }
     });
-}
+}*/
